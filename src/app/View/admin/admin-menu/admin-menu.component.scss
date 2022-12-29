@@ -1,0 +1,56 @@
+.bread {
+    padding: 10px 10px 4px;
+    border-bottom: 1px solid #ccc;
+    color: rgba(52, 63, 75, .8);
+    margin: 0 15px
+}
+
+.sub-title {
+    color: #000 !important;
+    font-weight: 800;
+    font-size: 16px;
+    span {
+        border-bottom: 1px solid #008b8b;
+        padding-bottom: 2px;
+    }
+}
+
+a {
+    color: #538686 !important;
+    font-size: 14px;
+}
+
+table {
+    th {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    td {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+
+
+.col-md-2x {
+    width: 20%;
+}
+.card{
+    box-shadow: 0px 8px 11px -8px black;
+    border: 1px solid #888888;
+}
+.menuFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+.list-unstyled {
+    // padding-left: 0;
+    list-style: inside;
+    padding-left: 23px;
+}

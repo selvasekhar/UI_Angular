@@ -1,0 +1,379 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-sm bg-light">
+
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">WELCOME
+                        </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px solid #484747;">CSFRONTLINE
+                         
+                        
+                        
+                        </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">CSS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">SECH</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">CSFRONTLINE REPORTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">REPORTS</a>
+                  </li>
+                  
+                </ul>
+              
+              </nav>
+        </div>
+        
+
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+
+                    <a routerLink="/view/admin/RoleSearch"> <b> Contact Center</b></a> 
+                     <i class="fa fa-caret-right ml-2"  aria-hidden="true"></i><a routerLink="/view/admin/RoleSearch">  <b> Regular Orders</b></a>  
+                     <i class="fa fa-caret-right ml-2"  aria-hidden="true"></i><a routerLink="/view/admin/RoleSearch">  <b> Booking Exceptions</b> </a>     
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="checkbox-inline"><input type="checkbox" value=""> Handle Contacts</label>&nbsp;
+                                <label class="checkbox-inline"><input type="checkbox" value=""> Booking</label>&nbsp;
+                                <label class="checkbox-inline"><input type="checkbox" value=""> Consignment</label>&nbsp;
+                                <label class="checkbox-inline"><input type="checkbox" value=""> Quote</label>&nbsp;
+                                <label class="checkbox-inline"><input type="checkbox" value=""> General Enquiry</label>&nbsp;
+                                <label class="checkbox-inline"><input type="checkbox" value=""> End Contact</label>&nbsp;
+
+                                <h6><b>Caller Summary Information</b></h6>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <mat-form-field>
+                                        <mat-label>Caller</mat-label>
+                                        <input matInput placeholder="Test CSFL">
+                                    </mat-form-field>
+                                    <!-- <label for="">Caller</label>
+                                    <input type="text" placeholder="Test CSFL" class="form-control" id="" style="color: #000;"> -->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field>
+                                    <mat-label>Caller</mat-label>
+                                    <input matInput placeholder="Test CSFL">
+                                </mat-form-field>
+                                <!-- <div class="form-group">
+                                    <label for="">Company Name</label>
+                                    <input type="text" placeholder="TAYCO ENGENHARIA" class="form-control" id="" style="color: #000;">
+                                </div> -->
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field>
+                                    <mat-label>Telephone Number</mat-label>
+                                    <input matInput placeholder="123 12345">
+                                </mat-form-field>
+                                <!-- <div class="form-group">
+                                    <label for="">Telephone Number</label>
+                                    <input type="text" placeholder="123 12345" class="form-control" id="" style="color: #000;">
+                                </div> -->
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field>
+                                    <mat-label>CRN</mat-label>
+                                    <input matInput placeholder="239DZP">
+                                </mat-form-field>
+                                <!-- <div class="form-group">
+                                    <label for="">CRN</label>
+                                    <input type="text" placeholder="239DZP" class="form-control" id="" style="color: #000;" >
+                                </div> -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+               
+                <div class="card-body">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row">
+
+
+                                <div class="col-md-3">
+<h6><b>Customer Contacts</b></h6>
+                                    <div class="form-group d-flex">
+                                        
+                                        <!-- <select class="form-control ml-3">
+                                            <option value="">ALL STREAMS</option>
+                                        </select> -->
+                                        
+                                        <!-- <mat-form-field>
+                                            <mat-label>Choose an option</mat-label>
+                                            <mat-select [disabled]="disableSelect.value">
+                                              <mat-option value="option1">Option 1</mat-option>
+                                              <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+                                              <mat-option value="option3">Option 3</mat-option>
+                                            </mat-select>
+                                          </mat-form-field> -->
+                                    </div>
+                                   
+
+                                </div>
+                                <div class="col-md-9 ml-auto pl-1 mb-1 pr-0 text-right">
+                                    <div class="btnn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn"><i class="fa fa-floppy-o"
+                                                aria-hidden="true"></i><span>View</span> </button>
+                                              <button type="button" (click)="open(content)" class="btn " routerLink="/userDetail"><i
+                                                class="fa fa-plus"></i><span>Edit</span> </button>
+                                        <button type="button" class="btn " (click)="openSearchPanel()"><i
+                                                class="fa fa-folder-open-o" aria-hidden="true"></i><span>Open</span>
+                                        </button>
+                                        <button type="button" class="btn "><i class="fa fa-trash"
+                                                aria-hidden="true"></i><span>Delete</span> </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12  px-0">
+                                    <div class="card">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th><b>Title</b></th>
+                                                        <th><b>First Name</b></th>
+                                                        <th><b> Initials</b></th>
+                                                        <th><b>Surname</b></th>
+                                                        <th><b>TNT Stream</b></th>
+                                                        <th><b>Rank</b></th>
+                                                        <th><b>Job Title</b></th>
+                                                        <th><b>Location Type</b></th>
+                                                        <th><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Dr</td><td>GEORGE</td><td></td><td>CHRISTOPHORAKIS</td><td>Operations</td><td>1</td><td></td><td>Main</td>
+                                                        <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Dr</td>
+                                                        <td>Testing Maintain</td>
+                                                        <td>TG</td>
+                                                        <td>CSFL</td>
+                                                        <td>CIT Contact *</td>
+                                                        <td>1</td>
+                                                        <td>Marketing Manager</td>
+                                                        <td>Main</td>
+                                                        <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Dr</td>
+                                                        <td>Test</td>
+                                                        <td>TG</td>
+                                                        <td>Gujadhur</td>
+                                                        <td>Speical Services</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                        <td>Main</td>
+                                                        <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sr</td>
+                                                        <td>Niall</td>
+                                                        <td></td>
+                                                        <td>McLoughlin</td>
+                                                        <td>Customer Services</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                        <td>Main</td>
+                                                        <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Dr</td>
+                                                        <td>Test</td>
+                                                        <td>tg</td>
+                                                        <td>csfl</td>
+                                                        <td>Operations</td>
+                                                        <td>2</td>
+                                                        <td></td>
+                                                        <td>Main</td>
+                                                        <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot style="background-color: #ccc;">
+                                                    <tr>
+                                                    <td colspan="4"><a href="#">Add Contact</a> | <a href="#">More Details</a> | <a href="#">Hide Contacts</a></td>
+                                                    <td colspan="5" style="text-align: end;"><a>< First</a> | <a>Prev ></a>  | <a><b>Page 1 of 1</b></a> | <a>< Next</a> <a>Last ></a></td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                            <div class="col-md-12 mt-1  d-flex">
+                                                <p class="s-text ">Showing 1 - 10 of 14 results</p>
+                                                <div class="ml-auto text-right">
+                                                    <ngb-pagination [collectionSize]="50" [(page)]="currentPage" size="sm" [boundaryLinks]="true"></ngb-pagination>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #content let-modal>
+    <div class="modal-header" style="background-color: #ff6600;">
+        <h4 class="modal-title" id="modal-basic-title">Regular Order / Booking Exceptions</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="col-md-12 nopad">
+                <div class="">
+                    <div class="form-group">
+                        <label for="">Title</label>
+                        <input type="text" placeholder="Dr" class="form-control" id="" style="color: #000;">
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label for="">First Name</label>
+                        <input type="text" placeholder="George" class="form-control" id="" style="color: #000;">
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label for="">Initials</label>
+                        <input type="text" placeholder="TG" class="form-control" id="" style="color: #000;">
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label for="">Surname</label>
+                        <input type="text" placeholder="CHRISTOPHORAKIS" class="form-control" id="" style="color: #000;" >
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="form-group">
+                        <label for="">TNT Stream</label>
+                        <input type="text" placeholder="Operations" class="form-control" id="" style="color: #000;" >
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label for="">Rank</label>
+                        <input type="text" placeholder="1" class="form-control" id="" style="color: #000;" >
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label for="">Job Title</label>
+                        <input type="text" placeholder="Marketing Manager" class="form-control" id="" style="color: #000;" >
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label for="">Location Type</label>
+                        <input type="text" placeholder="Main" class="form-control" id="" style="color: #000;" >
+                    </div>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+          <i class="fa fa-save"></i>&nbsp;&nbsp;&nbsp; Save&nbsp;&nbsp;&nbsp;
+      </button>
+        <button class="btn">
+          <i class="fa fa-refresh"></i>&nbsp;&nbsp;&nbsp; Refresh&nbsp;&nbsp;&nbsp;
+      </button>
+        <button class="btn">
+          <i class="fa fa-eraser"></i>&nbsp;&nbsp;&nbsp; Clear&nbsp;&nbsp;&nbsp;
+      </button>
+    </div>
+</ng-template>
+<ng-template #content1 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">New Metadata Value</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="col-md-12 ">
+                <div class="form-group ">
+                    <label>Data Type </label>
+                 
+                        <input type="text" class="form-control">
+                
+                </div>
+                <div class="form-group ">
+                    <label >Data Value </label>
+             
+                        <input type="text" class="form-control">
+                  
+                </div>
+                <div class="form-group ">
+                    <label>Data Name </label>
+           
+                        <input type="text" class="form-control">
+                  
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+          <i class="fa fa-save"></i> Save
+      </button>
+        <button class="btn">
+          <i class="fa fa-refresh"></i> Refresh
+      </button>
+        <button class="btn">
+          <i class="fa fa-eraser"></i> Clear
+      </button>
+    </div>
+</ng-template>
+<ng-template #content2 let-modal>
+    <div class="modal-body">
+        Are you sure to delete
+        <b>config 1 </b>?
+        <div class=" ml-auto text-right">
+            <button class="btn">
+        <i class="fa fa-times"></i> No
+      </button>
+            <button class="btn">
+        <i class="fa fa-trash"></i> Yes
+      </button>
+        </div>
+    </div>
+
+</ng-template>

@@ -1,0 +1,132 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-sm bg-light">
+
+               
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">WELCOME
+                        </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px solid #484747;">CSFRONTLINE
+                         
+                        
+                        
+                        </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">CSS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">SECH</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">CSFRONTLINE REPORTS</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#" style="border-bottom: 2px dotted #fff;">REPORTS</a>
+                  </li> -->
+                  
+                </ul>
+              
+              </nav>
+        </div>
+
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+
+                    
+                    <a routerLink="/view/admin/RoleSearch"> <b> Contact Center</b></a> 
+                     <i class="fa fa-caret-right ml-2"  aria-hidden="true"></i><a routerLink="/view/admin/RoleSearch">  <b> Regular Orders</b></a>  
+                     <i class="fa fa-caret-right ml-2"  aria-hidden="true"></i><a routerLink="/view/admin/RoleSearch">  <b> Booking Exceptions</b> </a>     
+                </div>
+            </div>
+        </div>
+            <div class="col-md-12 mt-1 mb-3 d-flex">
+                
+                <div class="ml-auto text-right">
+                    <div class="btnn-group">
+                        <button type="button" class="btn" routerLink="/view/admin/RoleDetail"><i class="fa fa-plus"></i><span>New</span> </button>
+                        <button type="button" class="btn" (click)="openSearchPanel()"><i class="fa fa-search"></i><span>Search</span> </button>
+                        <button type="button" class="btn"><i class="fa fa-eraser"></i><span>Clear</span> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" [ngClass]="searchPanel ? 'show':'hide'">
+                <div class="card py-3">
+                    <div class="close-btn" (click)="closeSearchPanel()"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row d-flex">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Caller</label>
+                                        <input type="text" placeholder="Test CSFL" class="form-control" id="" style="color: #000;">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Company Name</label>
+                                        <input type="text" placeholder="TAYCO ENGENHARIA" class="form-control" id="" style="color: #000;">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Telephone Number</label>
+                                        <input type="text" placeholder="123 12345" class="form-control" id="" style="color: #000;">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">CRN</label>
+                                        <input type="text" placeholder="239DZP" class="form-control" id="" style="color: #000;" >
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12 mt-1  d-flex">
+                <p class="s-text ">Showing 1 - 10 of 14 results</p>
+                <div class="ml-auto text-right">
+                    <ngb-pagination [collectionSize]="50" [(page)]="currentPage" size="sm" [boundaryLinks]="true"></ngb-pagination>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="table-responsive panelh">
+                        <table class="table table-sm table-hover">
+                            <thead class="thead-light">
+                                                          <tr>
+                                        <th><b>Title</b></th>
+                                        <th><b>First Name</b></th>
+                                        <th><b> Initials</b></th>
+                                        <th><b>Surname</b></th>
+                                        <th><b>TNT Stream</b></th>
+                                        <th><b>Rank</b></th>
+                                        <th><b>Job Title</b></th>
+                                        <th><b>Location Type</b></th>
+                                    </tr>
+                                
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

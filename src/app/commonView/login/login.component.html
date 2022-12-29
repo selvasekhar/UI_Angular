@@ -1,0 +1,231 @@
+<body>
+    <div class="left_img"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-7 p77">
+                <div class="loginForm" *ngIf="fourthdiv">
+                    <div class=" formgroup1 d-flex" (click)="log()" [ngClass]="login ? 'active' : ''">
+                        <div class="login button">LOGIN</div>
+                        <div class="backCircle">
+                            <div class="loginCircle">
+                                <i class="fa fa-user loginIcon" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" formgroup2 d-flex" (click)="reg()" [ngClass]="register ? 'active' : ''">
+                        <div class="registration button">REGISTER</div>
+                        <div class="backCircle">
+                            <div class="loginCircle">
+                                <i class="fa fa-user-plus loginIcon" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-5 initial" *ngIf="firstdiv">
+                <div class="initial2 login_box">
+                    <div *ngIf="loginForm" >                     
+                        <div class="loginHeading">LOGIN</div>
+                        <!-- <hr style="border-bottom: 2px dotted #c7c7c7;"> -->
+                      
+                        
+                        <div class="form-group mt-1">
+                         
+                            <mat-form-field>
+                                <mat-label>Enter User Name</mat-label>
+                                <input matInput placeholder="example@mphasis.com">
+                            </mat-form-field>
+                            
+                            <br>
+                            
+                              <mat-form-field >
+                                <mat-label>Enter your password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                              </mat-form-field>
+                        </div>
+                        <!-- <div class="form-group mt-1">
+                            <label for=""><b>Password</b></label>
+                            <div class="input-group mandatory">
+                                <input [type]="isActive ? 'password' : 'text'" class="form-control "
+                                    [ngClass]="errorOccure ? 'error' : ''" aria-label=""
+                                    aria-describedby="basic-addon1">
+                                <div class="input-group-append">
+                                    <button class="btn" type="button" (click)="eye()"><i
+                                            [ngClass]="isActive ? 'fa-eye-slash' : 'fa-eye'" class="faa  labelPrimary"
+                                            aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <button (click)="home()" class="btn btnprimary mt-4">Login</button> -->
+                        <button mat-raised-button color="primary" (click)="home()" >Login</button>
+                        
+                    </div>
+                    <div *ngIf="companyForm">
+                        <div class="loginHeading">Company Detail</div>
+                        <div class="form-group mt-1">
+                            <label>Company</label>
+                            <input type="text" class="form-control" placeholder="copra">
+                        </div>
+                        <div class="form-group mt-1">
+                            <label>Branch</label>
+                            <select class="form-control">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <button type="submit" [routerLink]="['/adminMenu']" class="btn btnprimary mt-4">Submit</button>
+                    </div>
+                    
+                    <div *ngIf="resetPassword">
+                        <div class="loginHeading">Reset Password</div>
+                        <!-- <hr style="border-bottom: 2px dotted #c7c7c7;"> -->
+                        <div class="form-group mt-1">
+                            <mat-form-field >
+                                <mat-label>New Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                              </mat-form-field>
+                            <!-- <label>New Password</label>
+                            <div>
+                                <input id="password-field" type="password" class="form-control" name="password" placeholder="Min 8 Characters">
+                                <span toggle="#password-field" class="faa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>-->
+                        </div> 
+                        <div class="form-group mt-1">
+                            <mat-form-field >
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                              </mat-form-field>
+                            <!-- <label>Confirm Password</label>
+                            <div>
+                                <input id="password-field" type="password" class="form-control" name="password" placeholder="Enter Password">
+                                <span toggle="#password-field" class="faa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div> -->
+                        </div>
+                        <!-- <button type="submit" class="btn btnprimary mt-4">Submit</button> -->
+                        <button mat-raised-button color="primary" >Submit</button>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="container-fluid">
+                            <div class="row mt-3 pt-2">
+                                <div class="col-md-6 pl-0">
+                                    <!-- <mat-checkbox>Remember Password</mat-checkbox> -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Remember Password</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-right" style="margin-top: 0px">
+                                    <a (click)="password()">
+                                        <label class="control-label  cursor"> Forgot Password</label>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-5 initial2" *ngIf="seconddiv">
+                <div class="initial2 reg_box">
+                    <div class="regheading">REGISTRATION</div>
+                    <!-- <hr style="border-bottom: 2px dotted #c7c7c7;"> -->
+                    <div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 dotBorder">
+                                    <div class="container-fluid mt-2">
+                                        <div class="row">
+                                            <div class="col-md-12 form-group">
+                                                
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <mat-form-field>
+                                                    <mat-label>Email ID</mat-label>
+                                                    <input matInput placeholder="store@gmail.com">
+                                                </mat-form-field>
+                                                <!-- <label>Email ID</label>
+                                                <input type="text" class="form-control" placeholder="shore@gmail.com"> -->
+                                                
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <mat-form-field>
+                                                    <mat-label>User Name</mat-label>
+                                                    <input matInput placeholder="User Name">
+                                                </mat-form-field>
+                                                <!-- <label>User Name</label>
+                                                <input type="text" class="form-control"> -->
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <mat-form-field>
+                                                    <mat-label>Phone Number</mat-label>
+                                                    <input matInput placeholder="+(91)-98411 88153">
+                                                </mat-form-field>
+                                                <!-- <label>Phone Number</label>
+                                                <input type="password" class="form-control" placeholder="+(91)-98411 88153"> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 dotBorderbottom">
+                                    <div class="container-fluid mt-2 ">
+                                        <div class="row">
+                                            <div class="col-md-12 form-group">
+                                               
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <mat-form-field>
+                                                    <mat-label>Company Name</mat-label>
+                                                    <input matInput placeholder="Mphasis">
+                                                </mat-form-field>
+                                                <!-- <label>Company Name</label>
+                                                <input type="password" class="form-control"> -->
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                 <mat-form-field>
+                                                    <mat-label>Company Mail ID</mat-label>
+                                                    <input matInput placeholder="company@mphasis.com">
+                                                </mat-form-field>
+                                                <!-- <label>Company Mail ID</label>
+                                                <input type="text" class="form-control" placeholder="company@email.com"> -->
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <mat-form-field class="example-full-width">
+                                                    <mat-label>Address Line 1</mat-label>
+                                                    <textarea matInput placeholder=""></textarea>
+                                                  </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <mat-form-field class="example-full-width">
+                                                    <mat-label>Address Line 2</mat-label>
+                                                    <textarea matInput placeholder=""></textarea>
+                                                  </mat-form-field>
+                                            </div> <br>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="terms mb-3 "> By clicking on submit, you will get an email from admin within two working days.
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <button mat-raised-button color="primary" (click)="home()"  (click)="home()">Submit</button>
+                                    <!-- <button type="submit" class="btn btnprimary  redirect" (click)="home()">Submit</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="bottom_font">Customer Service FrontLine</h2>
+        </div>
+    </div>
+</body>
